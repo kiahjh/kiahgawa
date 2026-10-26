@@ -95,6 +95,13 @@ class Themes(unittest.TestCase):
         self.assertGreaterEqual(contrast(self.p["border"], self.p["background"]), 3)
         self.assertGreaterEqual(contrast(self.p["background"], self.p["yellow"]), 7)
 
+    def test_surface_layers_are_distinct(self):
+        self.assertGreaterEqual(contrast(self.p["panel"], self.p["background"]), 1.15)
+        surfaces = ("inset", "background", "panel", "raised", "selection")
+        for lower, upper in zip(surfaces, surfaces[1:]):
+            with self.subTest(lower=lower, upper=upper):
+                self.assertLess(luminance(self.p[lower]), luminance(self.p[upper]))
+
     def test_dragon_surfaces_are_preserved(self):
         self.assertEqual(self.p["background"], "#181616")
         self.assertEqual(self.p["terminalBackground"], "#141313")
