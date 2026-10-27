@@ -3,6 +3,8 @@
 A warmer, clearer cousin of **Kanagawa Dragon**, with one shared palette for
 OpenCode V2, Rex, and Neovim. Early development.
 
+![Kiahgawa theme in Rex, with OpenCode on the left and Neovim and a terminal on the right](assets/screenshots/kiahgawa.png)
+
 - Dragon's warm charcoal surfaces, with slightly darker terminal panes.
 - Brighter foregrounds, comments, secondary labels, and borders.
 - Muted moss, dusty blue, mauve, and terracotta, with a warm gold focus accent.
